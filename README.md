@@ -1,2 +1,2 @@
 # get_wheater
-simple program  whith coordinates cities and wheater
+simple program  with coordinates cities and wheater
