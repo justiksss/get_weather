@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "simply-prog"
+version = "0.1.0"
+description = "test1"
+authors = ["justiksss"]
+readme = "README.md"
+packages = [{include = "simply_prog"}]
+
+[tool.poetry.dependencies]
+python = "3.11.2"
+requests = "^2.28.2"
+nominatim = "^0.1"
+geopy = "^2.3.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
