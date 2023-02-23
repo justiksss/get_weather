@@ -1,2 +1,2 @@
-# get_wheater
+# get_weather
 simple program
