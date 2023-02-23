@@ -1,2 +1,2 @@
-# get_wheater
-simple program  with coordinates cities and wheater
+# get_weather
+simple program  with coordinates cities and weather
