@@ -1,2 +1,2 @@
-# get_wheater
-simple program  which return info with weather by your coord
+# get_weather
+simple program  with coordinates cities and weather
