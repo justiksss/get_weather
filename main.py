@@ -1,25 +1,33 @@
-from methods import Methods
-user = Methods()
+from methods import get_weather, get_city, get_coord_from_city
 
 
-class Session(Methods):
+def maker(latitude: str, longitude: str):
+    dict_with_commands: dict = {1: get_weather, 2: get_city, 3: get_coord_from_city}
+
+    command_number = int(input())
+
+    dict_with_commands[command_number](latitude=latitude, longitude=longitude)
+
+
+def main():
+    latitude = input("Enter the latitude:")
+    longitude = input("Enter the longitude:")
+
+    commands_types = [
+        "1)Get info by coordinates",
+        "2)Get location",
+        "3)Get coordinates",
+    ]
+
+    for command in commands_types:
+        print(command)
 
     while True:
-        commands_tuple: tuple = ("1)Get info by coordinates", "2)Get location", "3)Get coordinates","4)Set new coordiantes")
-        for i in commands_tuple:
-            print(i)
-        @staticmethod
-        def main(number_of_command):
-            dict_with_commands: dict = {
-                1: user.get_weather,
-                2: user.get_city,
-                3: user.get_coord_from_city,
-                4: user.set_coordinates
-            }
-            dict_with_commands.get(number_of_command)()
+        maker(latitude=latitude, longitude=longitude)
 
 
-        main(int(input("Enter what to do:")))
+if __name__ == "__main__":
+    main()
 
 
 
